@@ -1,0 +1,4 @@
+/home/vagrant/augiedb/elixir/blackjack/_build/test/lib/blackjack/ebin/Elixir.Deck.beam	Elixir.Deck	lib/deck.ex	Elixir.Card	Elixir.Enum	Elixir
+/home/vagrant/augiedb/elixir/blackjack/_build/test/lib/blackjack/ebin/Elixir.Card.beam	Elixir.Card	lib/card.ex	Elixir.Kernel	Elixir.Kernel.Def	Elixir.Module	Elixir.Protocol	Elixir.String.Chars	erlang	Elixir
+/home/vagrant/augiedb/elixir/blackjack/_build/test/lib/blackjack/ebin/Elixir.Blackjack.beam	Elixir.Blackjack	lib/blackjack.ex	Elixir
+_build/test/lib/blackjack/ebin/Elixir.Hand.beam	Elixir.Hand	lib/hand.ex	Elixir.Kernel	erlang	Elixir
