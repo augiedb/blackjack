@@ -2,8 +2,7 @@ defmodule HandTest do
   use ExUnit.Case
   doctest Blackjack
 
-    @carda1 %Card{rank: 'Ace', suit: 'Diamonds', value: Card.init_points('Ace')}
-    @carda2 %Card{rank: 'Ace', suit: 'Diamonds', value: Card.init_points('Ace')}
+    @card_A %Card{rank: 'Ace', suit: 'Diamonds', value: Card.init_points('Ace')}
 
     @card_6  %Card{rank: 6, suit: 'Diamonds', value: Card.init_points(6)}
     @card_J  %Card{rank: 'Jack', suit: 'Hearts', value: Card.init_points('Jack')}
@@ -23,16 +22,16 @@ defmodule HandTest do
   end
 
   test "Score an Ace hand" do
-    assert Hand.current_score([@carda1, @card_J]) == 21
-    assert Hand.current_score([@carda1, @carda2]) == 12 
-    assert Hand.current_score([@carda2, @carda1]) == 12
+    assert Hand.current_score([@card_A, @card_J]) == 21
+    assert Hand.current_score([@card_A, @card_A]) == 12 
+    assert Hand.current_score([@card_A, @card_A]) == 12
   end
 
   test "Score hands with more than two cards" do
     assert Hand.current_score([@card_5, @card_6, @card_J]) == 21
-    assert Hand.current_score([@card_5, @card_6, @carda1]) == 12
-    assert Hand.current_score([@carda1, @carda1, @carda2, @card_5]) == 18
-    assert Hand.current_score([@carda1, @carda1, @carda2, @carda2]) == 14 # FOUR Aces
+    assert Hand.current_score([@card_5, @card_6, @card_A]) == 12
+    assert Hand.current_score([@card_A, @card_A, @card_A, @card_5]) == 18
+    assert Hand.current_score([@card_A, @card_A, @card_A, @card_A]) == 14 # FOUR Aces
 
   end
 
